@@ -16,7 +16,9 @@ int main(){
     strcpy(tanaka.name, "田中一郎");
     tanaka.salary = 200000;
 
-    printf("%c", tanaka.number);
+    cout << tanaka.number << "\n";
+    cout << tanaka.name << "\n";
+    cout << tanaka.salary << "\n";
 
     return 0;
 }
