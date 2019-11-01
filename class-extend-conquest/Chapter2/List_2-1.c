@@ -1,4 +1,4 @@
-//手続き型プログラミング(C言語)によるじゃんけんゲーム
+//�葱���^�v���O���~���O(C����)�ɂ�邶��񂯂�Q�[��
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,8 +34,8 @@ int main(){
 int getUserHand(){
     int hand;
 
-    printf("0: グー、1: チョキ、2:パー\n");
-    printf("ユーザーの手=");
+    printf("0:Rock, 1:Scissors, 2:Paper\n");
+    printf("User's hand is");
     scanf("%d", &hand);
     return hand;
 }
@@ -43,7 +43,7 @@ int getUserHand(){
 int getComputerHand(){
     int hand;
     hand = rand() % 3;
-    printf("コンピュータの手＝%d\n", hand);
+    printf("Computer's hand is %d\n", hand);
     return hand;
 }
 
