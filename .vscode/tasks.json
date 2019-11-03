@@ -6,9 +6,10 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g",
-                "-O0",
-                "class-extend-conquest/List_1-1.cpp"
+                "-o",
+               // "${fileBasenameNoExtension}.cpp",
+                "${file}",
+                "${file}.exe"
             ],
             "group": {
                 "kind": "build",
@@ -49,6 +50,24 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
         }
     ]
 }
