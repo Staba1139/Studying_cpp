@@ -3,15 +3,15 @@
 
 int main(){
 
-    //ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆä½œæˆ
+    //ƒIƒuƒWƒFƒNƒgì¬
     Employee tanaka;
 
-    //ãƒ¡ãƒ³ãƒé–¢æ•°ã«ãƒ‡ãƒ¼ã‚¿ã‚’è¨­å®š
+    //ƒƒ“ƒoŠÖ”‚Éƒf[ƒ^‚ğİ’è
     tanaka.number = 1234;
-    strcpy(tanaka.name, "ç”°ä¸­ä¸€éƒ");
+    strcpy(tanaka.name, "“c’†ˆê˜Y");
     tanaka.salary = 200000;
 
-    //ãƒ¡ãƒ³ãƒé–¢æ•°ã‚’å‘¼ã³å‡ºã™
+    //ƒƒ“ƒoŠÖ”‚ğŒÄ‚Ño‚·
     tanaka.showData();
 
     return 0;
