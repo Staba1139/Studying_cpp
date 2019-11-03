@@ -6,10 +6,40 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-o",
+                "-c",
                // "${fileBasenameNoExtension}.cpp",
                 "${file}",
-                "${file}.exe"
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "g++ CreateObjectfile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-I.",
+                "-c",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+
+        },
+        {
+            "label": "g++ Linking",
+            "type": "shell",
+            "command": "g++",
+            "args":[
+                "-o",
+                "main",
+                "${file}"
             ],
             "group": {
                 "kind": "build",
