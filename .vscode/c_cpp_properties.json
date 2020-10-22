@@ -1,8 +1,17 @@
 {
+    "env": {
+        "myDefaultIncludePath":[
+            "${workspaceFolder}",
+            "${workspaceFolder}/include"
+        ],
+        "myCompilerPath": "C:\\MinGW\\bin\\gcc.exe"
+    },
     "configurations": [
         {
             "name": "Win32",
+            "intelliSenseMode": "${default}",
             "includePath": [
+                "C:\\MinGW\\lib\\gcc\\mingw32\\9.2.0\\include\\c++",
                 "${workspaceFolder}/**",
                 "C:\\MinGW\\include"
             ],
@@ -14,8 +23,7 @@
             "windowsSdkVersion": "8.1",
             "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
             "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
