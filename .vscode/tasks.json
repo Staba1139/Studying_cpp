@@ -6,9 +6,40 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g",
-                "-O0",
-                "class-extend-conquest/List_1-1.cpp"
+                "-c",
+               // "${fileBasenameNoExtension}.cpp",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "g++ CreateObjectfile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-I.",
+                "-c",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+
+        },
+        {
+            "label": "g++ Linking",
+            "type": "shell",
+            "command": "g++",
+            "args":[
+                "-o",
+                "main",
+                "${file}"
             ],
             "group": {
                 "kind": "build",
@@ -49,6 +80,24 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
         }
     ]
 }
