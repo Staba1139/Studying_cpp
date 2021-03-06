@@ -6,6 +6,7 @@ void show_message(int value){
     }
     else{
         std::cout << "10以上20未満ではありません" << std::endl;
+        
     }
 
 }
